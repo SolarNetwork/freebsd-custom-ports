@@ -19,12 +19,16 @@ ALL_TARGET=	pgbackrest
 
 LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 		libpqxx.so:databases/postgresql-libpqxx \
-		libxml2.so:textproc/libxml2 \
-		libzstd.so:archivers/zstd
+		libxml2.so:textproc/libxml2
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	pgbackrest
 
 WANT_PGSQL=	server
 
+OPTIONS_DEFINE+=	ZSTD
+ZSTD_DESC=		Build with zstd compression support
+ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
+
 .include <bsd.port.mk>
+
