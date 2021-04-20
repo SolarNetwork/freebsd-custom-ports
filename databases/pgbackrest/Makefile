@@ -2,7 +2,7 @@
 
 PORTNAME=		pgbackrest
 DISTVERSIONPREFIX=	release/
-DISTVERSION=		2.32
+DISTVERSION=		2.33
 PORTREVISION=		1
 CATEGORIES=		databases
 
@@ -16,6 +16,7 @@ USES=		compiler:c++11-lang gmake pkgconfig pgsql ssl
 GNU_CONFIGURE=	yes
 WRKSRC_SUBDIR=	src
 ALL_TARGET=	pgbackrest
+CONFIGURE_ARGS+=--with-configdir=/usr/local/etc
 
 LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 		libpqxx.so:databases/postgresql-libpqxx \
