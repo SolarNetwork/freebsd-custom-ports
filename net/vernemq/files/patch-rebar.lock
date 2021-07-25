@@ -1,0 +1,11 @@
+--- rebar.lock.orig	2021-07-25 15:39:25.777622000 +1200
++++ rebar.lock	2021-07-25 15:42:12.580219000 +1200
+@@ -32,7 +32,7 @@
+   1},
+  {<<"eleveldb">>,
+   {git,"git://github.com/vernemq/eleveldb.git",
+-       {ref,"d2149fbaba3815399f144fa70dc37c645d229fe4"}},
++       {ref,"d9393e1dec448b415736cfffc21d6896da9b174e"}},
+   0},
+  {<<"emysql">>,
+   {git,"git://github.com/vernemq/Emysql.git",

@@ -11,7 +11,13 @@ COMMENT=	A high-performance, distributed MQTT broker.
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		compiler:c++11-lang gmake pkgconfig perl5 ssl
+# TODO: use vernemq user/group
+USERS=		www
+GROUPS=		www
+
+USES=		compiler:c++11-lang pkgconfig gmake perl5 ssl
+
+MAKE_ENV=	PATH=${LOCALBASE}/lib/erlang22/bin:${PATH}
 ALL_TARGET=	rel
 
 MY_DEPENDS=	erlang-runtime22>0:lang/erlang-runtime22
@@ -25,6 +31,11 @@ USE_GITHUB=	YES
 GH_ACCOUNT=	vernemq
 
 USE_PERL5=	build
+
+pre-build:
+	cd ${WRKSRC} && \
+	cp vars.config vars.generated && \
+	echo "{app_version, \"${DISTVERSION}\"}.">> vars.generated
 
 .include <bsd.port.mk>
 
