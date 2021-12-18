@@ -1,0 +1,6 @@
+The aggs_for_vecs extension adds various aggregate functions like min,
+max, avg, and var_samp that operate on arrays instead of scalers. It
+treats each array as a "vector" and handles each element independently.
+Similar behavior can be achieved by using UNNEST to break up the input
+arrays and then array_agg to put the results back together, however
+the aggs_for_vecs functions can be 5-10x faster.
