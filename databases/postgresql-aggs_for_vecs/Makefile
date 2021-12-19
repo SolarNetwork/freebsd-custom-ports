@@ -14,7 +14,7 @@ USES=		gmake pgsql
 
 USE_GITHUB=	YES
 GH_ACCOUNT=	SolarNetwork
-GH_TAGNAME=	6bb9daebb619808e6648d6a18cf1b80ad721f298
+GH_TAGNAME=	a4f1955b3dec6c7189d5a8af2be7d002e2f0e6bf
 
 WANT_PGSQL=	server
 
