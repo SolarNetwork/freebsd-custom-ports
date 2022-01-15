@@ -1,8 +1,9 @@
-PORTNAME=	aggs_for_vecs
-DISTVERSION=	1.3.0
-PORTREVISION=	1
-CATEGORIES=	databases
-PKGNAMEPREFIX=	postgresql-
+PORTNAME=		aggs_for_vecs
+DISTVERSION=		1.3.0
+DISTVERSIONPREFIX=	v
+PORTREVISION=		1
+CATEGORIES=		databases
+PKGNAMEPREFIX=		postgresql-
 
 MAINTAINER=	matt@solarnetwork.net
 COMMENT=	Aggregate functions for array inputs.
@@ -13,8 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		gmake pgsql
 
 USE_GITHUB=	YES
-GH_ACCOUNT=	SolarNetwork
-GH_TAGNAME=	10c788217de308e5c0f79721c7e6c4fe7a5cb477
+GH_ACCOUNT=	pjungwir
 
 WANT_PGSQL=	server
 
